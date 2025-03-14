@@ -1,10 +1,9 @@
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.chains import LLMChain, SequentialChain
 from langchain.prompts import PromptTemplate
+from dotenv import load_dotenv
 
-API_KEY = "AIzaSyAgRy8gTnQSGioorDXy-ZJSATvbk_34ynU"
-
-llm = ChatGoogleGenerativeAI(model='gemini-1.5-flash', api_key=API_KEY, temperature=0.7)
+llm = ChatGoogleGenerativeAI(model='gemini-1.5-flash', temperature=0.7)
 
 template1 = "Define life in 10 words"
 template2 = "Try your best to use letter {letter} as the first letter in every word(if possible) in : {promptt}"
