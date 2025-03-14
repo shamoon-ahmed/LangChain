@@ -1,9 +1,10 @@
 from langchain.prompts import PromptTemplate
 from langchain_google_genai import ChatGoogleGenerativeAI
+from dotenv import load_dotenv
 
-API_KEY = "AIzaSyAgRy8gTnQSGioorDXy-ZJSATvbk_34ynU"
+load_dotenv()
 
-llm = ChatGoogleGenerativeAI(model='gemini-1.5-flash', api_key=API_KEY, temperature=0.7)
+llm = ChatGoogleGenerativeAI(model='gemini-1.5-flash', temperature=0.7)
 
 template = "Generate 10 baby names that starts with {letter}"
 
